@@ -15,10 +15,10 @@ Route::post('/login', [AuthController::class, 'login'])->name('auth.login.post')
 Route::middleware(Authenticate::class)->group(function () {
     Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('auth.dashboard');
     Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
-    Route::get('/rumah-sakit', function () {
-        return '<h1>Halaman Rumah Sakit</h1><p>Akan dibuat nanti</p><a href="/dashboard">Kembali ke Dashboard</a>';
-    })->name('rumah-sakit.index');
+
     Route::get('/pasien', function () {
         return '<h1>Halaman Pasien</h1><p>Akan dibuat nanti</p><a href="/dashboard">Kembali ke Dashboard</a>';
     })->name('pasien.index');
+
+    Route::resource('rumah-sakit', RumahSakitController::class)->names('auth.rumah-sakit');
 });
