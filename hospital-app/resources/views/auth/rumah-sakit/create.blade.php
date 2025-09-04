@@ -29,9 +29,9 @@
                         class="nav-link text-white bg-primary bg-opacity-75 active">
                         <i class="fas fa-hospital me-2"></i> Rumah Sakit
                     </a>
-                    {{-- <a href="{{ route('auth.pasien.index') }}" class="nav-link text-white">
+                    <a href="{{ route('auth.pasien.index') }}" class="nav-link text-white">
                         <i class="fas fa-user-injured me-2"></i> Pasien
-                    </a> --}}
+                    </a>
                 </nav>
             </div>
         </div>
